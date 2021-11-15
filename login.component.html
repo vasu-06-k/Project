@@ -1,0 +1,10 @@
+<form #login="ngForm" (ngSubmit)="validate(login.value)">
+    <legend>Login Form</legend>
+    <label>Enter your user ID:</label>
+    <input type="text" [(ngModel)]="username" id="uname" name="uname" placeholder="Enter user id"/>
+    <br/>
+    <label>Enter password:</label>
+    <input type="text" [(ngModel)]="password" id="pwd" name="pwd" placeholder="Enter password"/>
+    <br/>
+    <input type="submit" value="Submit"/>
+  </form>
