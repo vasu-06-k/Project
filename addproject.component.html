@@ -1,0 +1,17 @@
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addpro(loginfrm.value)" >
+    <fieldset>
+<label>Enter Project ID</label>
+<input type="text" [(ngModel)]="addp.ProjectId" name="ProjectId"/>
+<br/>
+<label>Enter Project Name</label>
+<input type="text" [(ngModel)]="addp.ProjectName" name="ProjectName"/>
+<br/>
+<label>Enter Client name</label>
+<input type="text" [(ngModel)]="addp.ClientName" name="ClientName"/>
+<br/>
+<label>Enter No of days</label>
+<input type="text" [(ngModel)]="addp.NoOfDays" name="NoOfDays"/>
+<br/>
+<input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>

@@ -1,0 +1,59 @@
+<div >
+    <h1>EmployeeList</h1>
+    <table class="table table-hover">
+        <thead><tr>   
+            <td>ResumeId</td>
+            <td>FullName</td>
+            <td>DOB</td>
+            <td>Age</td>
+            <td>Email</td>
+            <td>PhoneNo</td>
+            <td>Gender</td>
+            <td>Address</td>
+            <td>Nationality</td>
+            <td>Experience</td>
+            <td>Interest</td>
+            <td>Specialization</td>
+            <td>TenthPercent</td>
+            <td>TwelfthPercent</td>
+            <td>College</td>
+            <td>GraduationCourse</td>
+            <td>Branch</td>
+            <td>YearOfGraduation</td>
+            <td>TotalCGPA</td>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let sd of resume">
+                <td>{{sd.ResumeId}}</td>
+                <td>{{sd.FullName}}</td>
+                <td>{{sd.DOB}}</td>
+                <td>{{sd.Age}}</td>
+                <td>{{sd.Email}}</td>
+                <td>{{sd.PhoneNo}}</td>
+                <td>{{sd.Gender}}</td>
+                <td>{{sd.Address}}</td>
+                <td>{{sd.Nationality}}</td>
+                <td>{{sd.Experience}}</td>
+                <td>{{sd.Interest}}</td>
+                <td>{{sd.Specialization}}</td>
+                <td>{{sd.TenthPercent}}</td>    
+                <td>{{sd.TwelfthPercent}}</td>  
+                <td>{{sd.College}}</td>  
+                <td>{{sd.GraduationCourse}}</td>  
+                <td>{{sd.Branch}}</td>  
+                <td>{{sd.YearOfGraduation}}</td>    
+                <td>{{sd.TotalCGPA}}</td>
+                <td>
+                    <button type="submit" class="btn btn-primary"  (click)="SendDetails(sd)">Accept</button>
+                </td> 
+                <td>
+                    <button type="submit" class="btn btn-primary" (click)="Deleteresume(sd)">Reject</button>
+                </td>    
+
+            </tr>
+        </tbody>
+    </table>
+    <!-- <button (click)="addres()">Add Resume</button> -->
+    </div>
+   

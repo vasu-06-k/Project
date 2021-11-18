@@ -1,0 +1,70 @@
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addresume(loginfrm.value)">
+ <div class="form-group">
+    <fieldset>
+        <label>Enter your Full Name:</label>
+        <input type="text" [(ngModel)]="addr.FullName" name="FullName"/>
+        <br/>
+        <label>Enter your DOB:</label>
+        <input type="datetime-local" [(ngModel)]="addr.DOB" name="DOB"/>
+        <br/>
+        <label>Enter your Age</label>
+        <input type="number" [(ngModel)]="addr.Age" name="Age"/>
+        <br/>
+        <label>Enter your Email-ID</label>
+        <input type="email" [(ngModel)]="addr.Email" name="Email"/>
+        <br/>
+        <label>Enter your Phone No.:</label>
+        <input type="number" [(ngModel)]="addr.PhoneNo" name="PhoneNo"/>
+        <br/>
+        <label for="gender">Enter Gender</label>
+       <select name="gender" id="gender" [(ngModel)]="addr.Gender" >
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+       </select>
+       <br/>
+       <label>Enter Address</label>
+       <input type="textbox" [(ngModel)]="addr.Address" id="" name="Address"/>
+       <br/>
+       <label>Enter Nationality</label>
+       <input type="text" [(ngModel)]="addr.Nationality" id="" name="Nationality"/>
+       <br/>
+        <label>Enter previous work experience:</label>
+        <input type="text" [(ngModel)]="addr.Experience" name="Experience"/>
+        <br/>
+        <label>Enter your areas of interest:</label>
+        <input type="text" [(ngModel)]="addr.Interest" name="Interest"/>
+        <br/>
+        <label>Enter your area of specialization:</label>
+        <input type="text" [(ngModel)]="addr.Specialization" name="Specialization"/>
+        <br/>
+        <label>Enter 10th Percentege</label>
+        <input type="number" [(ngModel)]="addr.TenthPercent" name="TenthPercent"/>
+        <br/>
+        <label>Enter 12th Percentege</label>
+        <input type="number" [(ngModel)]="addr.TwelfthPercent" name="TwelfthPercent"/>
+        <br/>
+        <label>Enter College Name:</label>
+        <input type="text" [(ngModel)]="addr.College" name="College"/>
+        <br/>
+        <label>Enter Graduation Course</label>
+        <input type="text" [(ngModel)]="addr.GraduationCourse" name="GraduationCourse"/>
+        <br/>
+        <label>Enter Branch:</label>
+        <input type="text" [(ngModel)]="addr.Branch" name="Branch"/>
+        <br/>
+        <label>Enter Year of Graduation</label>
+        <input type="number" [(ngModel)]="addr.YearOfGraduation" name="YearOfGraduation"/>
+        <br/>
+        <label>Enter CGPA</label>
+        <input type="number" [(ngModel)]="addr.TotalCGPA" name="TotalCGPA"/>
+        <br/>
+        <label>Upload Resume</label>
+        
+        <input type="file" (change)="uploadfile($event)" />
+        <br/>
+        <input type="submit" class="btn btn-primary" name="submit" />
+    </fieldset>
+ </div>
+</form>
+

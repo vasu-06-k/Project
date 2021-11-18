@@ -1,0 +1,24 @@
+<div >
+    <h1>ProjectList</h1>
+    <table class="table table-hover">
+        <thead><tr>   
+            <td>ProjectId</td>
+            <td>ProjectName</td>
+            <td>ClientName</td>
+            <td>NoOfDays</td>
+         
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let sd of prolist">
+                <td>{{sd.ProjectId}}</td>
+                <td>{{sd.ProjectName}}</td>
+                <td>{{sd.ClientName}}</td>
+                <td>{{sd.NoOfDays}}</td>
+                           
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <button (click)="addproj()">Add Project</button>
+    
