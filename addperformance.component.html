@@ -3,25 +3,38 @@
 <div class="justify-content-center" style="width: 60%;">
 <form #loginfrm="ngForm" class="form-group" (ngSubmit)=" addperformance(loginfrm.value)" >
     <fieldset>
-        <label>Enter Emploee id</label>
-       <input required maxlength="20" minlength="5" aria-errormessage="Should be min of length 5 char" type="number" class="form-control" [(ngModel)]=" addper.EmpId" id="" name="EmpId"/>
+        
+        <div class="form-group" [class.has-error]="id.invalid && id.touched" [class.has-success]="id.valid">
+        <label class="control-label">Enter Emploee id</label>
+       <input required maxlength="20" minlength="5" aria-errormessage="Should be min of length 5 char" type="number" class="form-control" [(ngModel)]=" addper.EmpId" id="" name="EmpId" required #id="ngModel"/>
+        <span class="help-block" *ngIf="id.invalid && id.touched"  style="color: red;">Employee ID is required</span>
+        </div>
+        <br/>
+        <div class="form-group" [class.has-error]="divi.invalid && divi.touched" [class.has-success]="divi.valid">
+       <label  class="control-label">Enter Divison</label>
+       <input type="text" required maxlength="20" minlength="5" class="form-control"[(ngModel)]="addper.Division" id="" name="Division" #divi="ngModel"/>
+            <span class="help-block" *ngIf="divi.invalid && divi.touched"  style="color: red;">Division  is required</span>
+            </div>
        <br/>
-       <label>Enter Divison</label>
-       <input type="text" required maxlength="20" minlength="5" class="form-control"[(ngModel)]="addper.Division" id="" name="Division"/>
+         <div class="form-group" [class.has-error]="wo.invalid && wo.touched" [class.has-success]="wo.valid">
+       <label  class="control-label">Enter Workgroup</label>
+       <input type="text" class="form-control"[(ngModel)]="addper.WorkGroup" id="" name="WorkGroup" required  #wo="ngModel"/>
+             <span class="help-block" *ngIf="wo.invalid && wo.touched"  style="color: red;">WorkGroup  is required</span>
+        </div>
        <br/>
-       <label>Enter Workgroup</label>
-       <input type="text" class="form-control"[(ngModel)]="addper.WorkGroup" id="" name="WorkGroup"/>
-       <br/>
-       <label>Enter Evaluation Date</label>
+       <label  class="control-label">Enter Evaluation Date</label>
        <input type="date"class="form-control"[(ngModel)]="addper.EvaluationDate" id="" name="EvaluationDate"/>
        <br/>
-       <label>Enter Evaluation Id</label>
-       <input type="number" class="form-control"[(ngModel)]="addper.EvaluatorId" id="" name="EvaluatorId"/>
+        <div class="form-group" [class.has-error]="ev.invalid && ev.touched" [class.has-success]="ev.valid">
+       <label  class="control-label">Enter Evaluation Id</label>
+       <input type="number" class="form-control"[(ngModel)]="addper.EvaluatorId" id="" name="EvaluatorId" required #ev="ngModel"/>
+            <span class="help-block" *ngIf="ev.invalid && ev.touched"  style="color: red;">Evaluation ID  is required</span>
+        </div>
        <br/>
-       <label>Enter Evaluation Period</label>
+       <label  class="control-label">Enter Evaluation Period</label>
        <input type="number" class="form-control"[(ngModel)]="addper.EvaluationPeriod" id="" name="EvaluationPeriod"/>
        <br/>
-       <input type="submit" class="btn btn-primary" name="vu"/>
+       <input type="submit" class="btn btn-primary" name="vu" [disabled]="loginfrm.invalid"/>
     </fieldset>
 </form>
 </div>
