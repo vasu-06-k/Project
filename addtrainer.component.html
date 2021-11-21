@@ -1,0 +1,26 @@
+<div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
+
+    <div class="form-froup row" style="width: 60%;">
+
+<form #loginfrm="ngForm" class="form-group look" (ngSubmit)="addtra(loginfrm.value)" >
+    <fieldset>
+<label  class="col-sm-2 col-form-label">Enter EmpId</label>
+<input type="number" [(ngModel)]="addt.TrainerId" name="EmpId"/>
+<br/>
+<label  class="col-sm-2 col-form-label">Enter PhoneNo</label>
+<input type="number" [(ngModel)]="addt.TrainerName" name="PhoneNo"/>
+<br/>
+<label  class="col-sm-2 col-form-label">Enter NoticePeriodDate</label>
+<input type="date" [(ngModel)]="addt.Address" name="NoticePeriodDate"/>
+<br/>
+<label  class="col-sm-2 col-form-label">Enter NoticePeriod</label>
+<input type="number" [(ngModel)]="addt.City" name="NoticePeriod"/>
+<br/>
+<label  class="col-sm-2 col-form-label">ResignationDate</label>
+<input type="date" [(ngModel)]="addt.Technology" name="ResignationDate"/>
+<br/>
+<input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
+    </div>
+</div>

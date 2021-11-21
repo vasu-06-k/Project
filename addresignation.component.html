@@ -1,0 +1,27 @@
+<app-homeforemp></app-homeforemp>
+<div class="d-flex flex-row bd-highlight mb-3 justify-content-center ">
+
+    <div class="form-froup row" style="width: 60%;">
+<h2>Apply Resignation</h2>
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addresign(loginfrm.value)" >
+    <fieldset>
+<label  class="col-sm-2 col-form-label">Enter EmpId</label>
+<input type="number" [(ngModel)]="addr.EmpId" name="EmpId"/>
+<br/>
+<label  class="col-sm-2 col-form-label">Enter PhoneNo</label>
+<input type="number" [(ngModel)]="addr.PhoneNo" name="PhoneNo"/>
+<br/>
+<label  class="col-sm-2 col-form-label">Enter NoticePeriodDate</label>
+<input type="date" [(ngModel)]="addr.NoticePeriodDate" name="NoticePeriodDate"/>
+<br/>
+<label>Enter NoticePeriod</label>
+<input type="number" [(ngModel)]="addr.NoticePeriod" name="NoticePeriod"/>
+<br/>
+<label  class="col-sm-2 col-form-label">ResignationDate</label>
+<input type="date" [(ngModel)]="addr.ResignationDate" name="ResignationDate"/>
+<br/>
+<input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
+    </div>
+</div>

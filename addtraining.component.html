@@ -1,0 +1,42 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+
+
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)=" addTrainee(loginfrm.value)" >
+    <fieldset>
+        <label  class="col-sm-2 col-form-label">Enter Employee id</label>
+       <input type="number" [(ngModel)]=" addtraining.EmpId" id="" name="EmpId"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter Batchno</label>
+       <input type="number" [(ngModel)]="addtraining.BatchNo" id="" name="BatchNo"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter Batchname</label>
+       <input type="text" [(ngModel)]="addtraining.BatchName" id="" name="BatchName"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter Courses</label>
+       <input type="text" [(ngModel)]="addtraining.Courses" id="" name="Courses"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter Traineer ID</label>
+       <input type="number" [(ngModel)]="addtraining.TrainerId" id="" name="TrainerId"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter  Manager Id</label>
+       <input type="number" [(ngModel)]="addtraining.ManagerId" id="" name="ManagerId"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter startdate</label>
+       <input type="Date" [(ngModel)]="addtraining.StartDate" id="" name="StartDate"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter enddate</label>
+       <input type="Date" [(ngModel)]="addtraining.EndDate" id="" name="EndDate"/>
+       <br/>
+       <label  class="col-sm-2 col-form-label">Enter Status</label>
+       <input type="text" [(ngModel)]="addtraining.Status" id="" name="Status"/>
+       <br/>
+       
+       
+
+       <input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
+    </div>
+</div>

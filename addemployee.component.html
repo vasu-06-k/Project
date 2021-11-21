@@ -1,0 +1,68 @@
+<div class="d-flex flex-row  mb-3 justify-content-center">
+    <div class="form-froup row" style="width: 60%;">
+        <h2>Add Employee Details</h2>
+<form #loginfrm="ngForm"  class="form-control look" (ngSubmit)="addemp(loginfrm.value)" >
+    <fieldset>
+        <h3>Personal Details</h3>
+        <hr style="width: 60%; color: blue;"/>
+        <label  class="col-sm-3 ">Enter Name</label>
+        <input  type="text"style="width:80%" class="form-control" [(ngModel)]="adde.EmployeeName" id="" name="EmployeeName"/>
+    
+       
+       <label  class="col-sm-3 col-form-label">Enter DOB:</label>
+       <input type="datetime-local" style="width:80%"class="form-control" [(ngModel)]="adde.DateOfBirth" id="" name="DateOfBirth"/>
+       
+       <label for="gender"class="col-sm-3 col-form-label" >Enter Gender</label>
+       <select  name="gender" id="gender" style="width:80%"[(ngModel)]="adde.Gender" class="form-control" >
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+       </select>
+       <br/>
+       <h3>Contact Details</h3>
+       <label  class="col-sm-4 col-form-label">Enter Phone No.</label>
+      
+       <input style="width:60%" type="number"style="width:80%" class="form-control"[(ngModel)]="adde.PhoneNo" id="" name="PhoneNo"/>
+    
+       <label  class="col-sm-4 col-form-label">Enter Address</label>
+       <input type="textbox"class="form-control"style="width:80%" [(ngModel)]="adde.Address" id="" name="Address"/>
+     
+       <label  class="col-sm-4 col-form-label">Enter Nationality</label>
+       <input type="text"class="form-control"style="width:80%" [(ngModel)]="adde.Nationality" id="" name="Nationality"/>
+       <br/>
+       <h3>Employee Status</h3>
+       <label  class="col-sm-4 col-form-label">Enter Work Location</label>
+       <input type="text" class="form-control"style="width:80%"[(ngModel)]="adde.WorkLocation" id="" name="WorkLocation"/>
+      
+       <label  class="col-sm-4 col-form-label">Enter Joining Date</label>
+        <input type="datetime-local"class="form-control"style="width:80%" [(ngModel)]="adde.JoiningDate" id="" name="JoiningDate"/>
+      
+       <label  class="col-sm-4 col-form-label">Enter Manager ID</label>
+       <input type="number" class="form-control"style="width:80%"[(ngModel)]="adde.ManagerId" id="" name="ManagerId"/>
+
+
+       <label class="col-sm-4 col-form-label">Enter Departmant No.</label>
+       <input type="number"class="form-control"style="width:80%" [(ngModel)]="adde.DeptNo" id="" name="DeptNo"/>
+      
+       <label for="designation" class="col-sm-3 col-form-label " >Enter Designation</label>
+       <select  name="designation" id="designation" style="width:80%" class="form-control" [(ngModel)]="adde.Designation" >
+        <option value="Analyst">Analyst</option>
+        <option value="WebDeveloper">Web Developer</option>
+        <option value="DataScientist">Data Scientist</option>
+       </select>
+     
+   
+       <label  class="col-sm-4 col-form-label">Enter Employee Status</label>
+       <input type="text" class="form-control"style="width:80%"[(ngModel)]="adde.EmpStatus" id="" name="EmpStatus"/>
+     
+       <input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
+</div>
+</div>
+
+
+
+
+
+

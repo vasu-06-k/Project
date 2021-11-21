@@ -1,0 +1,46 @@
+
+<app-homeforemp></app-homeforemp>
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="updatepayroll(loginfrm.value)" >
+    <fieldset>
+        <label class="col-sm-4 col-form-label">Enter Employee ID</label>
+       <input type="number" class="form-control" size="width:60%"   [(ngModel)]="pay.EmpId" id="" name="EmpId"/>
+       
+       <label class="col-sm-4 col-form-label">Enter Bank Account Number:</label>
+       <input type="number" class="form-control" size="width:60%"  [(ngModel)]="pay.BankAccountNo" id="" name="BankAccountNo"/>
+       
+       <label class="col-sm-4 col-form-label">Pf Number</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.ProvidentFundNo" id="" name="ProvidentFundNo"/>
+       
+
+       <label class="col-sm-4 col-form-label">Enter Basic pay</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.BasicPay" id="" name="BasicPay"/>
+       
+
+       <label class="col-sm-4 col-form-label">HRA</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.HRA" id="" name="HRA"/>
+       
+
+       <label class="col-sm-4 col-form-label">Medical Allowance</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.MedicalAllowance" id="" name="MedicalAllowance"/>
+     
+
+       <label class="col-sm-4 col-form-label">Tax</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.Tax" id="" name="Tax"/>
+     
+
+       <label class="col-sm-4 col-form-label">Bonus</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.Bonus" id="" name="Bonus"/>
+      
+
+       <label class="col-sm-4 col-form-label">No ofWorking Days</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.NoOfWorkDays" id="" name="NoOfWorkDays"/>
+       
+       <label class="col-sm-4 col-form-label">Grosspay</label>
+       <input type="number" class="form-control" size="width:60%" Disabled [(ngModel)]="pay.GrossPay" id="" name="GrossPay"/>
+       <br/> 
+
+       <button (click)="passid(pay.EmpId)"class="btn btn-primary" name="vut">Get Payroll Details </button>
+<br/>
+       <input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
